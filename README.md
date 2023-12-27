@@ -1,2 +1,2 @@
-# Wild-Wonders-BE
+# BE-Wild-Wonders
 Wild Wonders - Sightseers meet Scientists (Backend)

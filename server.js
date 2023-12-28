@@ -11,6 +11,14 @@ require('dotenv').config();
 //define port
 const port = process.env.PORT;
 
+//This allows the userType to be available in all pages
+// app.use(function (req, res, next) {
+// // console.log("req.user", req.user)
+// res.locals.user = req.user;
+// console.log(">>>>>>>>>>>>>>>>>>" + res.locals.user);
+// next();
+// });
+
 //database configuration & passport
 const db = require('./config/db');
 

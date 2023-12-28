@@ -8,9 +8,9 @@ const router = express.Router();
 const indexCntrl = require("../controllers/index");
 
 // Check if the user is logged in
-// const {checkType} = require("../config/checkType");
+const {checkType} = require("../config/checkType");
 
-router.use(express.urlencoded({ extended: true }));
+// router.use(express.urlencoded({ extended: true }));
 
 //Routes
-router.get("/", indexCntrl.index);
+router.get("/", checkType(1), indexCntrl.index);

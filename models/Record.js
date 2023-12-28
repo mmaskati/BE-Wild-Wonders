@@ -10,6 +10,7 @@ const recordSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref:'Species'
     },
+    notes:String,
   image:  [
     {
         type: String

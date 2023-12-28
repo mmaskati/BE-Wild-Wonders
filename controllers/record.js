@@ -8,4 +8,3 @@ const {Record} = require("../models/Record");
 // HTTP GET - Read - Retrieves the data
 // HTTP PUT - update - update the data
 //HTTP Delete/GET/POST - delete- delete the data
-

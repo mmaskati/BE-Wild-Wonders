@@ -1,10 +1,11 @@
 const express = require('express');
 
 const router = express.Router();
+router.use(express.json());
 
 const userCntrl = require("../controllers/user");
 
-router.get('/index', userCntrl.user_index_get);
+router.post('/fetch', userCntrl.user_fetch_post);
 
 //router.get('/delete', userCntrl.user_delete_get);
 

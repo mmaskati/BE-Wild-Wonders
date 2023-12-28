@@ -16,6 +16,7 @@ const userSchema = mongoose.Schema({
                 },
     userType: {
       //this is to set the user account by default to "contributor"
+      required: true,
       type: String,
       default: "3",
       enum: ["1", "2", "3"],

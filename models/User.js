@@ -13,7 +13,14 @@ const userSchema = mongoose.Schema({
     password: { type: String,
                 required: true,
                 minlength: [6, "Your password needs to be at least 6 characters long."],
-                }
+                },
+    userType: {
+      //this is to set the user account by default to "contributor"
+      type: String,
+      default: "3",
+      enum: ["1", "2", "3"],
+      enumNames: ["admin", "scientist", "contributor"],
+    }
 }, {
   timestamps: true
 })

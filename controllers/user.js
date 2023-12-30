@@ -9,7 +9,11 @@ exports.user_fetch_post = (req,res) => {
     
     Users.findById(req.body.userID)
     .then((userDetails) => {
-        res.json({"userDetails":userDetails});
+        console.log(userDetails);
+        userDetails.password = null;
+        // let data = { ...userDetails, password: null } //removing password
+        console.log(userDetails);
+        res.json({"userDetails": userDetails });
         //res.render("user/index", {users, dayjs, "title":"Show Users List"});
     })
     .catch((error) => {

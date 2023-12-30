@@ -16,3 +16,6 @@ router.get("/edit", RecordCntrl.record_edit_get);
 router.post("/update", RecordCntrl.record_update_post);
 
 
+module.exports = router;
+
+

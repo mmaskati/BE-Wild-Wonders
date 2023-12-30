@@ -14,3 +14,5 @@ const {checkType} = require("../config/checkType");
 
 //Routes
 router.get("/", checkType(1), indexCntrl.index);
+
+module.exports = router;

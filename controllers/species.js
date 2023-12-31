@@ -1,7 +1,7 @@
 //API's Function 
 
 const {Record} = require("../models/Record");
-const {Species} = require("../models/Species");
+const Species = require("../models/Species");
 
 
 // CRUD operations
@@ -21,9 +21,9 @@ exports.species_create_post = (req, res) => {
 
 //save species
 species.save()
-.then(() => {
+.then((specie) => {
     //res.redirect("/species/index");
-    res.json({species})
+    res.json({specie})
 })
 .catch((err) => {
     console.log(err);

@@ -21,3 +21,16 @@ exports.user_fetch_post = (req,res) => {
         //res.send("Cannot Show All Users. Please try again later.");
     })
 }
+
+//RESTful API
+exports.user_index_get = (req, res) => {
+Users.find()
+.then((users) => {
+    
+    res.json({ users }); 
+})
+.catch((err) => {
+    console.log(err);
+})
+
+}

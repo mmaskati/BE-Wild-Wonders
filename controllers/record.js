@@ -95,7 +95,8 @@ Record.find().populate('species','name')
 })
 .catch((err)=> {
     console.log(err);
-    res.render('record/index',{records: []});
+    //res.render('record/index',{records: []});
+    res.json({records: []});
 });
 }
 
@@ -125,7 +126,7 @@ console.log("Error is Cannot Updating " + err);
 };
 
 exports.record_edit_get = (req,res) =>{
-Record.findById(req.query.id).populate("species")
+Record.findById(req.query.id)
 .then((record)=>{
     
 //res.render('record/edit',{record});
@@ -133,7 +134,7 @@ res.json({record});
 })
 .catch((err) => {
     console.log(err);
-   //res.redirect("/record/index");
+   
    
 });
 };

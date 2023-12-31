@@ -11,7 +11,8 @@ const Species = require("../models/Species");
 //HTTP Delete/GET/POST - delete- delete the data
 
 exports.species_create_get = (req, res) => {
-    res.render("species/add");
+    //res.render("species/add");
+    res.json({species});
 }
 
 exports.species_create_post = (req, res) => {
@@ -44,9 +45,10 @@ exports.species_index_get= (req,res) =>{
 }
 exports.species_show_get = (req,res) =>{
     console.log(req.query.id);
-    Species.findById(req.query.id).populate('records')
-    .then((species) => {
-        res.render("species/detail", {species})
+    Species.findById(req.query.id)
+    .then((specie) => {
+        //res.render("species/detail", {species})
+        res.json({specie})
     })
     .catch((err) => {
         console.log(err);

@@ -2,12 +2,20 @@ const mongoose = require('mongoose');
 
 const speciesSchema = mongoose.Schema({
   name: String,
-  record: {
+  record: [{
     type: mongoose.Schema.Types.ObjectId,
     ref:'Record'
-  },
+  }],
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref:'User'
+    },
   "characteristics": {
     "type": String,
+    "common_name":String,
+    "color":String,
+    "weight": String,
+    "length": String,
     "location": String,
   }
 },

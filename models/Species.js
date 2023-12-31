@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 const speciesSchema = mongoose.Schema({
   name: String,
   record: [{
@@ -21,8 +20,6 @@ const speciesSchema = mongoose.Schema({
 },
   {
       timestamps: true
-
-
 });
 const Species = mongoose.model("Species", speciesSchema);
 

@@ -23,11 +23,21 @@ const port = process.env.PORT;
 const db = require('./config/db');
 
 //Require & import routes
+
 // const indexRouter = require('./routes/index');
 const userRouter = require('./routes/user');
 const authRouter = require('./routes/auth');
+//imports Routes
+const indexRouter= require("./routes/index");
+const recordRouter= require("./routes/record");
+const speciesRouter= require("./routes/species");
 
 //Mount routes
+app.use('/', indexRouter);
+app.use('/record', recordRouter);
+app.use('/species', speciesRouter);
+
+
 // app.use('/', indexRouter);
 app.use('/user', userRouter);
 app.use('/auth', authRouter);

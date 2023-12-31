@@ -1,7 +1,7 @@
 //API's Function 
 
 const {Record} = require("../models/Record");
-const {Species} = require("../models/Species");
+const Species = require("../models/Species");
 
 
 // CRUD operations
@@ -21,9 +21,9 @@ exports.species_create_post = (req, res) => {
 
 //save species
 species.save()
-.then(() => {
+.then((specie) => {
     //res.redirect("/species/index");
-    res.json({species})
+    res.json({specie})
 })
 .catch((err) => {
     console.log(err);
@@ -78,10 +78,11 @@ exports.species_edit_get = (req,res) =>{
 
 exports.species_update_post= (req,res) =>{
     console.log(req.body.id)
-    Species.findByIdAndUpdate(req.body.id, req.body)
-    .then((species) => {
+    Species.findByIdAndUpdate(req.body.id, req.body ,{new:true})
+    .then((specie) => {
+
        //res.redirect("/species/index");
-        res.json({species});
+        res.json({specie});
     })
     .catch((err) => {
         console.log(err);

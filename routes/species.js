@@ -1,8 +1,10 @@
 const express= require('express');
 
+
 // const methodOverride= require('method-override')
 const router= express.Router();
 router.use(express.urlencoded({extended: true}));
+router.use(express.json());
 const SpeciesCntrl= require("../controllers/species");
 const isLoggedIn = require('../helper/isLoggedIn')
 

@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 const recordSchema = mongoose.Schema({
-  name: String,
-  email: String,
-  phone: Number,
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref:'User'
+    },
   time: Date,
   date: Date,
   species: {
@@ -17,7 +18,9 @@ const recordSchema = mongoose.Schema({
     }
 ],
 locationLongitude: { type: Number, decimal: true },
-locationLatitude: { type: Number, decimal: true }
+locationLatitude: { type: Number, decimal: true },
+location:String,
+notes:String,
 }, {
   timestamps: true
 });

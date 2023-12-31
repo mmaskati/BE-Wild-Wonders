@@ -22,4 +22,5 @@ const speciesSchema = mongoose.Schema({
       timestamps: true
 });
 const Species = mongoose.model("Species", speciesSchema);
+
 module.exports =  Species ;

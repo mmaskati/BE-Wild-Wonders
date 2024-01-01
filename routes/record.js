@@ -4,7 +4,7 @@ const router= express.Router();
 router.use(express.urlencoded({extended: true}));
 router.use(express.json());
 const RecordCntrl= require("../controllers/record");
-const isLoggedIn = require('../helper/isLoggedIn')
+const isLoggedIn = require('../helper/isLoggedIn');
 
 
 //Routes

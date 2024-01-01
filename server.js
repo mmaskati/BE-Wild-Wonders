@@ -15,7 +15,7 @@ const port = process.env.PORT;
 // app.use(function (req, res, next) {
 // // console.log("req.user", req.user)
 // res.locals.user = req.user;
-// console.log(">>>>>>>>>>>>>>>>>>" + res.locals.user);
+// console.log(res.locals.user);
 // next();
 // });
 

@@ -44,9 +44,10 @@ exports.species_index_get= (req,res) =>{
 }
 exports.species_show_get = (req,res) =>{
     console.log(req.query.id);
-    Species.findById(req.query.id).populate('records')
+    Species.findById(req.query.id) //.populate('records')
     .then((species) => {
-        res.render("species/detail", {species})
+        // res.render("species/detail", {species})
+        res.json({species});
     })
     .catch((err) => {
         console.log(err);
@@ -66,7 +67,7 @@ exports.species_delete_get = (req,res) =>{
 }
 
 exports.species_edit_get = (req,res) =>{
-    Species.findByIdAndUpdate(req.query.id)
+    Species.findById(req.query.id)
     .then((species) => {
         //res.render("species/edit", {species});
         res.json({species});
@@ -77,8 +78,8 @@ exports.species_edit_get = (req,res) =>{
 }
 
 exports.species_update_post= (req,res) =>{
-    console.log(req.body.id)
-    Species.findByIdAndUpdate(req.body.id, req.body ,{new:true})
+    console.log(req.body._id)
+    Species.findByIdAndUpdate(req.body._id, req.body ,{new:true})
     .then((specie) => {
 
        //res.redirect("/species/index");

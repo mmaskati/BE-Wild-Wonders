@@ -16,7 +16,21 @@ const speciesSchema = mongoose.Schema({
     weight: String,
     length: String,
     location: String,
-  }
+    distinctive_feature: String,
+    habitat: String,
+    predators: String,
+    favorite_food: String,
+    main_prey: String,
+    slogan: String,
+    lifestyle: String,
+    skin_type: String,
+    top_speed: String,
+    lifespan: String,
+  },
+  notes: String,
+  show: { type: Boolean, default: true },
+  photo: String,
+
 },
   {
       timestamps: true

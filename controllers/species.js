@@ -11,7 +11,8 @@ const Species = require("../models/Species");
 //HTTP Delete/GET/POST - delete- delete the data
 
 exports.species_create_get = (req, res) => {
-    res.render("species/add");
+    //res.render("species/add");
+    res.json({species});
 }
 
 exports.species_create_post = (req, res) => {

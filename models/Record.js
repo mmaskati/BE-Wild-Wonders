@@ -12,15 +12,18 @@ const recordSchema = mongoose.Schema({
     ref:'Species'
     },
   
-  image:  [
-    {
-        type: String
-    }
-],
+//   image:  [
+//     {
+//         type: String
+//     }
+// ],
+image: String,
+
 locationLongitude: { type: Number, decimal: true },
 locationLatitude: { type: Number, decimal: true },
 location:String,
 notes:String,
+quantity: String
 }, {
   timestamps: true
 });

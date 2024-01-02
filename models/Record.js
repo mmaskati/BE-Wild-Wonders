@@ -6,7 +6,7 @@ const recordSchema = mongoose.Schema({
     ref:'User'
     },
   time: String,
-  date: String,
+  date: Date,
   species: {
     type: mongoose.Schema.Types.ObjectId,
     ref:'Species'

@@ -37,4 +37,4 @@ const speciesSchema = mongoose.Schema({
 });
 const Species = mongoose.model("Species", speciesSchema);
 
-module.exports =  Species ;
+module.exports =  {Species} ;

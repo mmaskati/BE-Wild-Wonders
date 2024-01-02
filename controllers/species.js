@@ -1,7 +1,7 @@
 //API's Function 
 
 const {Record} = require("../models/Record");
-const Species = require("../models/Species");
+const {Species} = require("../models/Species");
 
 
 // CRUD operations

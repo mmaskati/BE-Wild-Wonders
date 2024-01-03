@@ -9,7 +9,7 @@ const speciesSchema = mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref:'User'
     },
-  characteristics: {
+  
     speciestype: String,
     common_name: String,
     color: String,
@@ -26,7 +26,7 @@ const speciesSchema = mongoose.Schema({
     skin_type: String,
     top_speed: String,
     lifespan: String,
-  },
+  
   notes: String,
   show: { type: Boolean, default: true },
   photo: String,

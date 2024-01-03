@@ -112,13 +112,23 @@ console.log(req.body._id);
 console.log(req.body.password);
 // console.log(typeof(req.body.password));
 let userID = req.body._id;
+console.log(userID);
 
-if((req.body.password).toString().length > 0){
+if((req.body.password !== null)){
     
 //bcrypt new password
 let hash = bcrypt.hashSync(req.body.password, salt);
 req.body.password = hash;
 console.log(req.body.password);
+
+Users.findByIdAndUpdate(req.body._id, req.body, {new: true}) //return the newly updated object
+    .then((user) => {
+        user.password = null;
+        res.json({user})
+    })
+    .catch(err => {
+        console.log(err);
+    })
 
 }else{
 //get old password and keep it

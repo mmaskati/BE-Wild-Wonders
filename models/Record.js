@@ -21,8 +21,8 @@ image: String,
 
 locationLongitude: { type: Number, decimal: true },
 locationLatitude: { type: Number, decimal: true },
-location:String,
-notes:String,
+location: String,
+notes: String,
 quantity: String
 }, {
   timestamps: true

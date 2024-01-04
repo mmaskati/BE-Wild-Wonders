@@ -24,16 +24,16 @@ using the Node.js to build scalable and responsive server-side applications and 
 ### `1. npm init` 
 ### `2. nodemon`
 
-Runs the app in the development mode.\
-Open [http://localhost:4000](http://localhost:4000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
 ## Testing the Web App:
 
 - `POSTMAN` is a popular API development and testing tool.
 - Using different requests for different APIs (e.g., GET, POST, PUT, DELETE) and define the desired endpoints and parameters.
+
+tests the app in the development mode.
+Open [http://localhost:4000](http://localhost:4000).
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
 ## Learn More
 

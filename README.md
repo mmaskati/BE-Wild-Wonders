@@ -18,6 +18,7 @@ jsonwebtoken-
 - bcrypt
 - dotenv
 
+Trello Link: ![Alt trello](https://trello.com/invite/b/Q9YtKVD3/ATTI8e8385e13574383cfa55d47041b732b0A3A83BBE/wild-wonders)
 
 # Models (User, Record, Species)
 

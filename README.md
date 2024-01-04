@@ -12,6 +12,12 @@ using the Node.js to build scalable and responsive server-side applications and 
 
 - Node.js
 - Mongo DB 
+- dayjs
+- Express
+- Mongoose 
+- bcrypt
+- dotenv
+
 
 # Models (User, Record, Species)
 

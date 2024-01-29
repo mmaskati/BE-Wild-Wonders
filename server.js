@@ -9,7 +9,7 @@ var path = require("path");
 require('dotenv').config();
 
 //define port
-const port = process.env.PORT;
+//const port = process.env.PORT;
 
 //This allows the userType to be available in all pages
 // app.use(function (req, res, next) {
@@ -43,9 +43,9 @@ app.use('/user', userRouter);
 app.use('/auth', authRouter);
 
 //Console
-app.listen(port, () => {
-    console.log(`WILD WONDERS App running on Port \u001b[1;35m${port}\u001b[0m`);
-});
+// app.listen(port, () => {
+//     console.log(`WILD WONDERS App running on Port \u001b[1;35m${port}\u001b[0m`);
+// });
 
 //use for scales object to be available in all views
 // app.use(function (req, res, next) {
